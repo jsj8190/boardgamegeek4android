@@ -129,16 +129,16 @@ public class PollFragment extends DialogFragment implements LoaderCallbacks<Curs
 		}
 		switch (pollType) {
 			case LANGUAGE_DEPENDENCE:
-				getDialog().setTitle(R.string.language_dependence);
+				//getDialog().setTitle(R.string.language_dependence);
 				chartColors = ColorUtils.FIVE_STAGE_COLORS;
 				break;
 			case SUGGESTED_PLAYER_AGE:
-				getDialog().setTitle(R.string.suggested_playerage);
+				//getDialog().setTitle(R.string.suggested_playerage);
 				chartColors = null;
 				break;
 			case SUGGESTED_NUM_PLAYERS:
 				isBarChart = true;
-				getDialog().setTitle(R.string.suggested_numplayers);
+				//getDialog().setTitle(R.string.suggested_numplayers);
 				addKeyRow(ContextCompat.getColor(getActivity(), R.color.best), BEST);
 				addKeyRow(ContextCompat.getColor(getActivity(), R.color.recommended), RECOMMENDED);
 				addKeyRow(ContextCompat.getColor(getActivity(), R.color.not_recommended), NOT_RECOMMENDED);

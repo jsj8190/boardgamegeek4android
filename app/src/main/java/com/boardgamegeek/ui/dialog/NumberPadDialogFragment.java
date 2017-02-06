@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AppCompatDialogFragment;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.HapticFeedbackConstants;
@@ -24,7 +25,7 @@ import butterknife.OnClick;
 import butterknife.OnLongClick;
 import butterknife.Unbinder;
 
-public class NumberPadDialogFragment extends DialogFragment {
+public class NumberPadDialogFragment extends AppCompatDialogFragment {
 	private static final String KEY_TITLE = "TITLE";
 	private static final String KEY_OUTPUT = "OUTPUT";
 	private static final String KEY_COLOR = "COLOR";

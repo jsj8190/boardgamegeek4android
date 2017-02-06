@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +29,7 @@ import butterknife.Unbinder;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
-public class CollectionSortDialogFragment extends DialogFragment implements OnCheckedChangeListener {
+public class CollectionSortDialogFragment extends AppCompatDialogFragment implements OnCheckedChangeListener {
 	public interface Listener {
 		void onSortSelected(int sortType);
 	}

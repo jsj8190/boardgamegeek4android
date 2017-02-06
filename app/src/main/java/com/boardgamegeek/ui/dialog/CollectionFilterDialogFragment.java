@@ -4,8 +4,8 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatDialogFragment;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +27,7 @@ import butterknife.Unbinder;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
-public class CollectionFilterDialogFragment extends DialogFragment {
+public class CollectionFilterDialogFragment extends AppCompatDialogFragment {
 	public interface Listener {
 		void onFilterSelected(int filterType);
 	}
