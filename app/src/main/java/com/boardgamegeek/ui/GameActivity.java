@@ -356,6 +356,16 @@ public class GameActivity extends HeroTabActivity implements Callback {
 		private void updateTabs() {
 			tabs.clear();
 			tabs.add(new Tab(
+				R.string.title_description,
+				R.drawable.fab_log_play,
+				new TabListener() {
+					@Override
+					public void onFabClicked() {
+						onPlayFabClicked();
+					}
+				}
+			));
+			tabs.add(new Tab(
 				R.string.title_info,
 				R.drawable.fab_log_play,
 				new TabListener() {
@@ -402,6 +412,8 @@ public class GameActivity extends HeroTabActivity implements Callback {
 		public Fragment getItem(int position) {
 			if (position < tabs.size()) {
 				switch (tabs.get(position).getTitleResId()) {
+					case R.string.title_description:
+						return GameDescriptionFragment.newInstance(gameId);
 					case R.string.title_info:
 						return GameFragment.newInstance(gameId, gameName, iconColor, darkColor);
 					case R.string.title_collection:
